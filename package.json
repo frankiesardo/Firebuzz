@@ -1,0 +1,50 @@
+{
+  "name": "firebuzz",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@chakra-ui/react": "^1.0.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
+    "@testing-library/jest-dom": "^5.9.0",
+    "@testing-library/react": "^10.2.1",
+    "@testing-library/user-event": "^12.0.2",
+    "@types/jest": "^25.0.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "firebase": "^9.0.0-beta.8",
+    "framer-motion": "^4.0.0",
+    "react": "^18.0.0-alpha-6f3fcbd6f-20210730",
+    "react-dom": "^18.0.0-alpha-6f3fcbd6f-20210730",
+    "react-icons": "^3.0.0",
+    "react-query": "^3.19.1",
+    "react-scripts": "4.0.3",
+    "reactfire": "^4.0.0-exp.2c0d936",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "deploy": "firebase deploy"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "firebase-tools": "^9.16.0"
+  }
+}
