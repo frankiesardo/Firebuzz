@@ -72,7 +72,7 @@ function GuestWhoDidNotBuzzList() {
   const guestList = useGuestList();
   const items = guestList
     .filter(({ buzzed }) => !buzzed)
-    .sort((a, b) => a.score - b.score);
+    .sort((a, b) => b.score - a.score);
 
   const isHost = useIsHost();
 
