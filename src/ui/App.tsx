@@ -11,7 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { Home, Host, Join } from ".";
-import { useParams, useIsHost } from "../hooks";
+import { useParams, useIsHost, useRoom } from "../hooks";
+import { useEffect } from "react";
 
 export default function App() {
   const app = useFirebaseApp();
@@ -40,6 +41,10 @@ export default function App() {
 
 const Room = () => {
   const isHost = useIsHost();
+  const { id: roomId } = useRoom();
+  useEffect(() => {
+    document.title = `Firebuzz room: ${roomId}`;
+  }, [roomId]);
   return isHost ? <Host /> : <Join />;
 };
 

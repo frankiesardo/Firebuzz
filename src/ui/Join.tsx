@@ -38,11 +38,12 @@ export default function Join() {
           color="white"
           size="lg"
           onClick={() => {
-            document.location.search = "";
+            window.location.href =
+              window.location.origin + window.location.pathname;
           }}
         />
         <Heading color="white" size="md">
-          Room number: {roomId}
+          Room name: {roomId}
         </Heading>
       </HStack>
       <HStack px={4} py={1} spacing="-5px">
