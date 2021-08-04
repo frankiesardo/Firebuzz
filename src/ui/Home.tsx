@@ -9,7 +9,9 @@ import {
   Spacer,
   FormControl,
   HStack,
+  Icon,
 } from "@chakra-ui/react";
+import { AiFillFire } from "react-icons/ai";
 import React, { useEffect } from "react";
 import { useCreateRoom } from "../hooks";
 
@@ -25,8 +27,9 @@ export default function Home() {
   return (
     <Flex direction="column" h={window.innerHeight}>
       <HStack px={5} h="58px" bg="teal.500" shadow="base">
+        <Icon as={AiFillFire} w="30px" h="30px" color="white" />
         <Heading color="white" size="md">
-          Buzzer Multiplayer
+          Firebuzz
         </Heading>
       </HStack>
       <Box m={8} />

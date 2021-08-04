@@ -1,4 +1,4 @@
-import { MdEdit } from "react-icons/md";
+import { AiFillEdit } from "react-icons/ai";
 import {
   Box,
   Button,
@@ -9,6 +9,7 @@ import {
   FormLabel,
   Heading,
   HStack,
+  Icon,
   Input,
   Modal,
   ModalBody,
@@ -32,7 +33,7 @@ export default function Join() {
 
   return (
     <Flex direction="column" h={window.innerHeight}>
-      <HStack px={5} h="58px" bg="teal.500" shadow="base" spacing="8px">
+      <HStack px={5} h="58px" bg="teal.500" shadow="base">
         <CloseButton
           color="white"
           size="lg"
@@ -85,7 +86,7 @@ function EditName({ id, name }: { id: string; name: string }) {
     <Button
       colorScheme="pink"
       variant="ghost"
-      rightIcon={<MdEdit />}
+      rightIcon={<Icon as={AiFillEdit} />}
       onClick={onOpen}
     >
       Name: {name}

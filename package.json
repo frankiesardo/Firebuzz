@@ -17,7 +17,7 @@
     "framer-motion": "^4.0.0",
     "react": "^18.0.0-alpha-6f3fcbd6f-20210730",
     "react-dom": "^18.0.0-alpha-6f3fcbd6f-20210730",
-    "react-icons": "^3.0.0",
+    "react-icons": "^4.2.0",
     "react-query": "^3.19.1",
     "react-scripts": "4.0.3",
     "reactfire": "^4.0.0-exp.2c0d936",

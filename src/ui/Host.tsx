@@ -30,7 +30,7 @@ export default function Host() {
 
   return (
     <Flex direction="column" h={window.innerHeight}>
-      <HStack px={5} h="58px" bg="teal.500" shadow="base" spacing="8px">
+      <HStack px={5} h="58px" bg="teal.500" shadow="base">
         <CloseButton
           color="white"
           size="lg"

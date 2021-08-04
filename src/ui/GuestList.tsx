@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
-import { MdAddCircleOutline } from "react-icons/md";
 import { motion, AnimateSharedLayout } from "framer-motion";
+import { AiOutlinePlusCircle } from "react-icons/ai";
 import { List, ListItem } from "@chakra-ui/layout";
 import {
   Box,
@@ -8,6 +8,7 @@ import {
   Divider,
   FormControl,
   FormLabel,
+  Icon,
   Modal,
   ModalBody,
   ModalCloseButton,
@@ -118,7 +119,7 @@ function EditScore({ id, score }: { id: string; score: number }) {
   return (
     <Button
       size="xs"
-      rightIcon={<MdAddCircleOutline />}
+      rightIcon={<Icon as={AiOutlinePlusCircle} />}
       colorScheme="pink"
       onClick={onOpen}
     >
