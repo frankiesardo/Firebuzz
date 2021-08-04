@@ -28,6 +28,7 @@ service cloud.firestore {
                  request.resource.data.name.size() < 100 &&
                  request.resource.data.score is number &&
           			 (request.resource.data.buzzed == null || 
+                 	request.resource.data.buzzed == resource.data.buzzed ||
                   request.resource.data.buzzed == request.time)
         }
       }  
