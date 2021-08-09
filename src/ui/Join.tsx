@@ -1,5 +1,9 @@
 import { AiFillEdit } from "react-icons/ai";
 import {
+  Alert,
+  AlertDescription,
+  AlertIcon,
+  AlertTitle,
   Box,
   Button,
   Center,
@@ -27,9 +31,7 @@ import { GuestList } from ".";
 const sound = new Audio("/audio/buzz.mp3");
 
 export default function Join() {
-  const { id: roomId } = useRoom();
-  const { id: guestId, name, buzzed } = useGuest();
-  const { mutate: buzz } = useBuzz();
+  const { id: roomId, hostId } = useRoom();
 
   return (
     <Flex direction="column" h={window.innerHeight}>
@@ -43,9 +45,42 @@ export default function Join() {
           }}
         />
         <Heading color="white" size="md">
-          Room name: {roomId}
+          Room number: {roomId}
         </Heading>
       </HStack>
+      {!hostId ? (
+        <>
+          <Alert
+            status="error"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+          >
+            <AlertIcon boxSize="40px" />
+            <AlertTitle mt={4} mb={1} fontSize="lg">
+              This room number does not exist
+            </AlertTitle>
+            <AlertDescription>
+              Try navigating back and use a different one
+            </AlertDescription>
+          </Alert>
+        </>
+      ) : (
+        <>
+          <Actions />
+          <Box m={6} />
+          <GuestList />
+        </>
+      )}
+    </Flex>
+  );
+}
+
+function Actions() {
+  const { id: guestId, name, buzzed } = useGuest();
+  const { mutate: buzz } = useBuzz();
+  return (
+    <>
       <HStack px={4} py={1} spacing="-5px">
         <EditName id={guestId} name={name} />
       </HStack>
@@ -65,9 +100,7 @@ export default function Join() {
           Buzz!
         </Button>
       </Center>
-      <Box m={6} />
-      <GuestList />
-    </Flex>
+    </>
   );
 }
 

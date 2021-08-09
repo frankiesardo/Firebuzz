@@ -50,7 +50,7 @@ export default function Home() {
                   <Input
                     name="roomId"
                     variant="flushed"
-                    placeholder="Room name"
+                    placeholder="Room number"
                     maxW="40"
                   />
                 </FormControl>

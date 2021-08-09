@@ -31,4 +31,4 @@ const createRoom = async (
   return roomId;
 };
 
-const randomId = () => Math.random().toString(36).slice(2, 8);
+const randomId = () => Math.random().toString().substr(2, 6);
